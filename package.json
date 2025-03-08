@@ -2,6 +2,7 @@
   "name": "@h1ve2/pixi-canvaspool",
   "version": "0.1.0",
   "type": "module",
+  "repository": "https://github.com/h1ve2/pixi-canvaspool",
   "exports": {
     ".": {
       "import": "./dist/index.js",
