@@ -16,6 +16,9 @@
   "author": "h1ve2",
   "license": "MIT",
   "description": "为pixi.js添加Canvas资源池",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": ["./dist/"],
   "dependencies": {
     "pixi.js": "^8.8.1",
