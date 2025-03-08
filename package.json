@@ -2,7 +2,11 @@
   "name": "@h1ve2/pixi-canvaspool",
   "version": "0.1.0",
   "type": "module",
-  "repository": "https://github.com/h1ve2/pixi-canvaspool",
+  "homepage": "https://github.com/h1ve2/pixi-canvaspool",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/h1ve2/pixi-canvaspool.git"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -16,6 +20,9 @@
   "author": "h1ve2",
   "license": "MIT",
   "description": "为pixi.js添加Canvas资源池",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": ["./dist/"],
   "dependencies": {
     "pixi.js": "^8.8.1",
