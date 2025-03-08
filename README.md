@@ -4,11 +4,15 @@
 
 在使用大量图片资源时能够有效避免getContent("2d")为null的情况。
 
-> 导入后将劫持 DOMAdapter.get().createCanvas()
+> 导入后CanvasPool将自动注入DOMAdapter.get().createCanvas()
 >
-> 需要手动调用remove或removeBundle销毁对应资源释放canvas
+> 需要手动调用destroy或destroyBundle销毁对应资源释放canvas
 
 ## 使用方法
+``` 
+npm install "@h1ve2/pixi-canvaspool"
+// yarn add "@h1ve2/pixi-canvaspool"
+```
 ### 使用Bundle (建议)
 
 ```
