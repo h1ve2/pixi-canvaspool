@@ -21,15 +21,21 @@
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf ./dist",
     "prepublishOnly": "npm run build"
   },
   "publishConfig": {
     "access": "public"
   },
-  "files": ["./dist/"],
+  "files": [
+    "./dist/"
+  ],
   "dependencies": {
     "pixi.js": "^8.8.1",
     "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
   }
 }
