@@ -1,30 +1,30 @@
 # @h1ve2/pixi-canvaspool
 
-只是用来修复PIXI在safari11等不支持ImageBitmap的浏览器中的资源限制问题。
+Used to fix the resource restriction issue of PIXI in browsers such as Safari 11 that do not support Imagebitmap.
 
-在使用大量图片资源时能够有效避免getContent("2d")为null的情况。
+It can effectively avoid the situation where getContent ("2d") is null when using a large number of image resources.
 
-> 导入后CanvasPool将自动注入DOMAdapter.get().createCanvas()
+> After import, CanvasPool will automatically inject DOMAdapter.get().createCanvas()
 >
-> 需要手动调用destroy或destroyBundle销毁对应资源释放canvas
+> Need to manually call destroy or destroyBundle to destroy the corresponding resource and release the canvas
 
-## 使用方法
+## Usage
 ``` 
 npm install "@h1ve2/pixi-canvaspool"
 // yarn add "@h1ve2/pixi-canvaspool"
 ```
-### 使用Bundle (建议)
+### Use Bundle (recommended)
 
 ```
 import {CanvasPool} from "@h1ve2/pixi-canvaspool"
 ...
 
-CanvasPool.destroyBundle(bundleId); //在资源组卸载前主动调用以释放canvas
+CanvasPool.destroyBundle(bundleId); // Proactively call to release canvas before uninstalling the resource group
 Assets.unloadBundle(bundleId);
 ...
 ```
 
-### 使用url
+### Use url
 ```
 import {CanvasPool} from "@h1ve2/pixi-canvaspool"
 ...
