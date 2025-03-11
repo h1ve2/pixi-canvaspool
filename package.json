@@ -1,11 +1,18 @@
 {
   "name": "@h1ve2/pixi-canvaspool",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
+  "author": "h1ve2",
+  "license": "MIT",
+  "description": "Used to fix the resource restriction issue of PIXI in browsers such as Safari 11 that do not support Imagebitmap.",
   "homepage": "https://github.com/h1ve2/pixi-canvaspool",
+  "keywords": [
+    "pixi",
+    "canvaspool"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/h1ve2/pixi-canvaspool.git"
+    "url": "git+https://github.com/h1ve2/pixi-canvaspool.git"
   },
   "exports": {
     ".": {
@@ -14,18 +21,21 @@
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf ./dist",
     "prepublishOnly": "npm run build"
   },
-  "author": "h1ve2",
-  "license": "MIT",
-  "description": "为pixi.js添加Canvas资源池",
   "publishConfig": {
     "access": "public"
   },
-  "files": ["./dist/"],
+  "files": [
+    "./dist/"
+  ],
   "dependencies": {
     "pixi.js": "^8.8.1",
     "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
   }
 }
