@@ -1,5 +1,7 @@
 # @h1ve2/pixi-canvaspool
 
+[简体中文](./README.zh-CN.md)
+
 Used to fix the resource restriction issue of PIXI in browsers such as Safari 11 that do not support Imagebitmap.
 
 It can effectively avoid the situation where getContent ("2d") is null when using a large number of image resources.
